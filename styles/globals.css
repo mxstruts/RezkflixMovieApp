@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-[#141414] text-white;
+        
+    }
+
+    header {
+        @apply fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6 select-none 
+    }
+
+    
+
+
+     /* @media only screen and (max-width: 768px) {
+        .leftSide{
+            display: none;
+        }
+      } */
+
+     
+
+
+
+}
+
+@layer components {
+    .headerLink {
+        @apply cursor-pointer text-sm font-light text-[#e5e5e5] transition duration-[0.4s] hover:text-[#b3b3b3]
+    }
+
+    .headerRightLink{
+        @apply cursor-pointer hover:text-[#b3b3b3] font-bold;
+    }
+
+    
+    .leftSide{
+        @apply  top-16 relative w-36 z-10 overflow-x-hidden select-none ml-3;
+    }
+
+    .leftSideRow{
+        @apply cursor-pointer hover:text-[#e5e5e556] text-[#e4e4e4] pt-2.5 transition-all;
+    }
+
+    .leftSide .icon{
+        @apply float-left mr-3 mt-1;
+     }
+
+    .leftnavBlock{
+        @apply mb-8;
+     }
+
+    .leftSideRowText{
+        @apply text-[#e4e4e4] font-bold
+     }
+
+     .bannerButton{
+        @apply cursor-pointer flex items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:py-2.5 md:px-8 md:text-xl;
+     }
+    
+     
+}
