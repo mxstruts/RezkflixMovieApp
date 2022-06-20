@@ -1,14 +1,11 @@
 import { BellIcon, SearchIcon, MenuIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { Func, Movie } from '../typing'
 
-interface Props {
-  onClose: boolean
-}
-
-export default function Header({ onClose }: Props) {
+export default function Header({ onClose }: Func) {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -22,10 +19,6 @@ export default function Header({ onClose }: Props) {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
-
-  function closeMenu() {
-    setIsOpen(true)
-  }
 
   return (
     <header className={`${isScrolled && 'bg-[#141414]'}`}>

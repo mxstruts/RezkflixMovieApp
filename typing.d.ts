@@ -31,3 +31,7 @@ export interface Genre {
       | 'Trailer'
       | 'Teaser'
   }
+
+  export interface Func {
+    onClose: boolean
+  }

@@ -6,7 +6,8 @@ import Leftnav from '../components/Leftnav'
 import Banner from '../components/Banner'
 import requests from '../utils/requests'
 import { useState } from 'react'
-import { Movie } from '../typing'
+import { Func, Movie } from '../typing'
+import Row from '../components/Row'
 
 interface Props {
   netflixOriginals: Movie[]
@@ -17,6 +18,7 @@ interface Props {
   horrorMovies: Movie[]
   romanceMovies: Movie[]
   documentaries: Movie[]
+  onClose: boolean
 }
 
 const Home = ({
@@ -28,6 +30,7 @@ const Home = ({
   romanceMovies,
   topRated,
   trendingNow,
+  onClose,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -45,9 +48,20 @@ const Home = ({
         />
       </Head>
       <Header onClose={() => handleMenu()} />
-      <main>
+      <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16">
         {isOpen && <Leftnav />}
         <Banner netflixOriginals={netflixOriginals} />
+        <section>
+          <Row title="Trending Now" movies={trendingNow} />
+          <Row title="Top Rated" movies={topRated} />
+          <Row title="Action Thrillers" movies={actionMovies} />
+          {/* My List */}
+
+          <Row title="Comedies" movies={comedyMovies} />
+          <Row title="Scary Movies" movies={horrorMovies} />
+          <Row title="Romance Movies" movies={romanceMovies} />
+          <Row title="Documentaries" movies={documentaries} />
+        </section>
       </main>
     </div>
   )

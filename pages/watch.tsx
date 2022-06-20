@@ -13,7 +13,7 @@ function watch() {
           href="https://icon-library.com/images/free-movies-icon/free-movies-icon-16.jpg"
         />
       </Head>
-      <Header />
+      <Header onClose={console.log('1')} />
       <div className="absolute top-[15vh] left-0 md:left-[65vh] md:top-56">
         <Player />
       </div>

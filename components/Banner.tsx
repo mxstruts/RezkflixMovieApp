@@ -27,26 +27,25 @@ function Banner({ netflixOriginals }: Props) {
           objectFit="cover"
         />
       </div>
-      <div className="relative left-5 md:left-10">
-        <h1 className="mb-3 text-2xl font-bold md:text-4xl lg:text-7xl">
-          {movie?.title || movie?.name || movie?.original_name}
-        </h1>
-        <p className="mb-3 max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">
-          {movie?.overview}
-        </p>
 
-        <div className="flex space-x-3">
-          <Link href="/watch">
-            <button className="bannerButton bg-white text-black">
-              <FaPlay className="h-4 w-4 text-black md:h-7 md:w-7" />
-              Play
-            </button>
-          </Link>
-          <button className="bannerButton bg-[gray]/70">
-            More Info
-            <InformationCircleIcon className="h-5 w-5 md:h-8 md:w-8" />
+      <h1 className="mb-3 text-2xl font-bold md:text-4xl lg:text-7xl">
+        {movie?.title || movie?.name || movie?.original_name}
+      </h1>
+      <p className="mb-3 max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">
+        {movie?.overview}
+      </p>
+
+      <div className="flex space-x-3">
+        <Link href="/watch">
+          <button className="bannerButton bg-white text-black">
+            <FaPlay className="h-4 w-4 text-black md:h-7 md:w-7" />
+            Play
           </button>
-        </div>
+        </Link>
+        <button className="bannerButton bg-[gray]/70">
+          More Info
+          <InformationCircleIcon className="h-5 w-5 md:h-8 md:w-8" />
+        </button>
       </div>
     </div>
   )
