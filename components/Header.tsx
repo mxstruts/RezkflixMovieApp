@@ -1,9 +1,14 @@
-import { BellIcon, SearchIcon, MenuIcon } from '@heroicons/react/solid'
+import {
+  BellIcon,
+  SearchIcon,
+  MenuIcon,
+  ChevronDownIcon,
+} from '@heroicons/react/outline'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Func, Movie } from '../typing'
 
-export default function Header({ onClose }: Func) {
+export default function Header({ onClose }: any) {
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -28,7 +33,7 @@ export default function Header({ onClose }: Func) {
             src="https://rb.gy/ulxxee"
             width={100}
             height={100}
-            className="cursor-pointer object-contain"
+            className=" hidden cursor-pointer object-contain sm:flex"
           />
         </Link>
         <ul className="hidden space-x-4 sm:flex">
@@ -42,20 +47,23 @@ export default function Header({ onClose }: Func) {
       <div className=" flex items-center space-x-3 text-sm font-light">
         <MenuIcon
           className="headerRightLink  h-6 w-6 sm:visible"
-          onClick={onClose}
+          onClick={() => onClose()}
         />
         <SearchIcon className="headerRightLink  h-6 w-6" />
         <p className="headerRightLink">Kids</p>
         <BellIcon className="headerRightLink h-6 w-6" />
-        <Link href="/account">
-          <a>
-            <img
-              src="https://rb.gy/g1pwyx"
-              alt=""
-              className="cursor-pointer rounded"
-            />
-          </a>
-        </Link>
+        <div className=" flex cursor-pointer items-center space-x-2 pl-5">
+          <img
+            src="https://rb.gy/g1pwyx"
+            alt=""
+            className="h-8 w-8 cursor-pointer rounded-full"
+          />
+          <div>
+            <p className="text-sm font-bold">Armani Makni</p>
+            <p className="text-xs font-thin">armanimakni@gmail.com</p>
+          </div>
+          <ChevronDownIcon className="h-5 w-5" />
+        </div>
       </div>
     </header>
   )

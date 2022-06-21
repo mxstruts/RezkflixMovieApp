@@ -18,7 +18,6 @@ interface Props {
   horrorMovies: Movie[]
   romanceMovies: Movie[]
   documentaries: Movie[]
-  onClose: boolean
 }
 
 const Home = ({
@@ -30,7 +29,6 @@ const Home = ({
   romanceMovies,
   topRated,
   trendingNow,
-  onClose,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -39,7 +37,7 @@ const Home = ({
   }
 
   return (
-    <div className="relative h-screen overflow-hidden bg-gradient-to-b from-gray-900/10 to-[#010511] py-2 lg:h-[140vh]">
+    <div className="relative h-screen overflow-hidden bg-gradient-to-b from-gray-900/10 to-[#010511] py-2 lg:h-full">
       <Head>
         <title>Home - Rezkflix</title>
         <link
@@ -51,7 +49,7 @@ const Home = ({
       <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16">
         {isOpen && <Leftnav />}
         <Banner netflixOriginals={netflixOriginals} />
-        <section>
+        <section className="md:space-y-24">
           <Row title="Trending Now" movies={trendingNow} />
           <Row title="Top Rated" movies={topRated} />
           <Row title="Action Thrillers" movies={actionMovies} />

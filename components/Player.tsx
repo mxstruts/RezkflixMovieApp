@@ -5,7 +5,7 @@ const Player = () => (
   <div>
     <head></head>
     <ReactPlayer
-      url="	https://coliseum.stream.voidboost.cc/5/7/3/5/0/8/0ecbd9a982bc5e13a45a9d9817b92788:2022061802:76d27aa6-968d-49b7-8993-7d1ba1da4b38/par64.mp4"
+      url="https://coliseum.stream.voidboost.cc/5/8/4/3/1/6/e07d1ed17a52063d36be262eea232490:2022062118:a6c4f598-0f77-4f43-a30f-23a9fba006e6/nu99n.mp4"
       controls
     />
   </div>

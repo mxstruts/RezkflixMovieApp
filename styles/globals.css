@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply bg-[#141414] text-white;
+        @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-blue-700;
         
     }
 
@@ -29,7 +29,7 @@
 
 @layer components {
     .headerLink {
-        @apply cursor-pointer text-sm font-light text-[#e5e5e5] transition duration-[0.4s] hover:text-[#b3b3b3]
+        @apply cursor-pointer text-base font-normal text-[#e5e5e5] transition duration-[0.4s] hover:text-[#b3b3b3]
     }
 
     .headerRightLink{
