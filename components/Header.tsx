@@ -60,7 +60,7 @@ export default function Header({ onClose }: any) {
           />
           <div>
             <p className="text-sm font-bold">Armani Makni</p>
-            <p className="text-xs font-thin">armanimakni@gmail.com</p>
+            <p className="text-xs font-thin">armanimaknii@gmail.com</p>
           </div>
           <ChevronDownIcon className="h-5 w-5" />
         </div>
