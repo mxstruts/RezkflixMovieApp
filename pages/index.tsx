@@ -8,6 +8,7 @@ import requests from '../utils/requests'
 import { useState } from 'react'
 import { Func, Movie } from '../typing'
 import Row from '../components/Row'
+import Footer from '../components/Footer'
 
 interface Props {
   netflixOriginals: Movie[]
@@ -37,7 +38,7 @@ const Home = ({
   }
 
   return (
-    <div className="relative h-screen overflow-hidden bg-gradient-to-b from-gray-900/10 to-[#010511] py-2 lg:h-full">
+    <div className="relative overflow-hidden bg-gradient-to-b from-gray-900/10 to-[#010511] py-2 lg:h-full">
       <Head>
         <title>Home - Rezkflix</title>
         <link
@@ -45,9 +46,9 @@ const Home = ({
           href="https://icon-library.com/images/free-movies-icon/free-movies-icon-16.jpg"
         />
       </Head>
-      <Header onClose={() => handleMenu()} />
+      {/* <Header onClose={() => handleMenu()} />
+      {isOpen && <Leftnav />} */}
       <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16">
-        {isOpen && <Leftnav />}
         <Banner netflixOriginals={netflixOriginals} />
         <section className="md:space-y-24">
           <Row title="Trending Now" movies={trendingNow} />

@@ -3,9 +3,10 @@ import ReactPlayer from 'react-player'
 
 const Player = () => (
   <div>
-    <head></head>
     <ReactPlayer
-      url="https://coliseum.stream.voidboost.cc/5/8/4/3/1/6/e07d1ed17a52063d36be262eea232490:2022062118:a6c4f598-0f77-4f43-a30f-23a9fba006e6/nu99n.mp4"
+      width="200%"
+      height="200%"
+      url="https://www.youtube.com/watch?v=Jj6DvnV6e2M&list=RDJj6DvnV6e2M&start_radio=1"
       controls
     />
   </div>
