@@ -3,7 +3,7 @@ import {
   AiOutlineFacebook,
   AiOutlineGithub,
   AiOutlineInstagram,
-} from 'react-icons/Ai'
+} from 'react-icons/ai'
 
 function Footer() {
   return (
